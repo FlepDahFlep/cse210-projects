@@ -1,7 +1,39 @@
 public class Reference
 {
-  public string _reference;
+  public string _book;
 
-  public string _words;
+  public int _chapter;
+
+  public int _verse;
+
+  public int _endVerse;
+
+  public Reference(string book, int chapter, int verse)
+  {
+    _book = book;
+    _chapter = chapter;
+    _verse = verse;
+    _endVerse = 0;
+  }
+
+  public Reference(string book, int chapter, int verse, int endVerse)
+  {
+    _book = book;
+    _chapter = chapter;
+    _verse = verse;
+    _endVerse = endVerse;
+  }
+
+  public string GetDisplayText()
+  {
+    if (_endVerse == 0)
+    {
+      return $"{_book} {_chapter}:{_verse}";
+    }
+    else
+    {
+      return $"{_book} {_chapter}:{_verse}-{_endVerse}";
+    }
+  }
 
 }
