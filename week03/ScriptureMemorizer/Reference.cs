@@ -1,12 +1,12 @@
 public class Reference
 {
-  public string _book;
+  private string _book;
 
-  public int _chapter;
+  private int _chapter;
 
-  public int _verse;
+  private int _verse;
 
-  public int _endVerse;
+  private int _endVerse;
 
   public Reference(string book, int chapter, int verse)
   {
@@ -35,5 +35,5 @@ public class Reference
       return $"{_book} {_chapter}:{_verse}-{_endVerse}";
     }
   }
-
+  
 }
