@@ -8,4 +8,6 @@ public class Comment
         _Name = name;
         _Text = text;
     }
+
+    //Finished
 }
