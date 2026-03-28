@@ -33,7 +33,7 @@ class Program
 
             foreach (Comment comment in video.GetComments())
             {
-                Console.WriteLine($" {comment._Name}: {comment._Text}");
+                Console.WriteLine($" {comment.Name}: {comment.Text}");
             }
             Console.WriteLine();
         }
