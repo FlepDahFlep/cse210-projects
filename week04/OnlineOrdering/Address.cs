@@ -19,7 +19,7 @@ public class Address
     }
 
     public string GetFullAddress()
-    {s
+    {
         return $"{_street}\n{_city}, {_state}\n{_country}";
     }
 }
