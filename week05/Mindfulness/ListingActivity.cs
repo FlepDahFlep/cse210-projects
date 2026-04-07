@@ -22,7 +22,7 @@ public class ListingActivity : Activity
         Console.WriteLine("You may begin in: ");
         ShowCountDown(5);
 
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
         _count = 0;
 
         while (DateTime.Now < endTime)
@@ -35,7 +35,7 @@ public class ListingActivity : Activity
         Console.WriteLine($"You listed {_count} items!");
         DisplayEndingMessage();
 
-        ActivityLog.LogActivity(_name);
+        ActivityLog.LogActivity(GetName());
 
     }
 

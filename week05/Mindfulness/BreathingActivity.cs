@@ -9,7 +9,7 @@ public class BreathingActivity : Activity
     {
         DisplayStartingMessage();
 
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
 
         while (DateTime.Now < endTime)
         {
@@ -20,6 +20,6 @@ public class BreathingActivity : Activity
 
         DisplayEndingMessage();
 
-        ActivityLog.LogActivity(_name);
+        ActivityLog.LogActivity(GetName());
     }
 }

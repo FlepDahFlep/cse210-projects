@@ -2,14 +2,23 @@ using System.Net;
 
 public class Activity
 {
-    protected string _name;
-    protected string _description;
-    protected int _duration;
+    private string _name;
+    private string _description;
+    private int _duration;
 
     public Activity(string name, string description)
     {
         _name = name;
         _description = description;
+    }
+
+    protected string GetName()
+    {
+        return _name;
+    }
+    protected int GetDuration()
+    {
+        return _duration;
     }
 
     public void DisplayStartingMessage()

@@ -36,7 +36,7 @@ public class ReflectingActivity : Activity
         Console.WriteLine("\nNow ponder on each following questions given:");
         Console.WriteLine("You may begin in:"); ShowCountDown(5);
 
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
+        DateTime endTime = DateTime.Now.AddSeconds(GetDuration());
 
         while (DateTime.Now < endTime)
         {
@@ -47,7 +47,7 @@ public class ReflectingActivity : Activity
 
         DisplayEndingMessage();
 
-        ActivityLog.LogActivity(_name);
+        ActivityLog.LogActivity(GetName());
     }
     private string GetRandomPrompt()
     {
