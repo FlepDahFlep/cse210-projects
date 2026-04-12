@@ -12,6 +12,7 @@ public class GoalManager
     private void UpdateLevel()
     {
        _level = (_score / 100) + 1;
+       Console.WriteLine($"Hey! You leveled up! You are now level {_level}!");
     }
 
     public void Start()
